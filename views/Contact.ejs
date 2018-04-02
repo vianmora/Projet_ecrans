@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+	<% include partials/Head.ejs %>
+
+	<body>
+		<header>
+			<h1>Projet Ecran</h1>
+			<h2>Contacte nous !</h2>
+		</header>
+
+		<% include partials/Navigation.ejs %>
+
+		<section>
+			<p>
+				Voici un formulaire de contact, n'hésitez pas faire remonter tes critiques !!
+			</p>
+		</section>
+
+		<form methode ="post" action = "/Contact-success">
+			<p>
+				<label for = 'mail'>Ton adresse mail<br /></label>
+				<input type = 'email' name ='mail'/> <br /><br />
+
+				<label for = 'object'>Objet de ton message<br /></label>
+				<input type = 'text' name = 'object' /><br /><br />
+
+				<label for = 'message'>Vas y, dis nous tout ! ;) <br /></label>
+				<textarea name = 'message' rows="10" cols="50"></textarea><br /><br />
+
+				<input type="submit" value="Envoyer" />
+			</p>
+		</form>
+
+		<% include partials/Footer.ejs %>
+
+	</body>
+
+</html>
