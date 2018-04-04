@@ -2,7 +2,7 @@
 var fs = require ('fs');
 
 /* serveur simple */
-
+  
 var server = http.createServer(function (req, res) {
   console.log('request was made from :' + req.url);
 
