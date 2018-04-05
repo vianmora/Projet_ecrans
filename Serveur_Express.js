@@ -5,7 +5,7 @@ var app = express();
 
 /*Utiliser le moteur de template ejs*/
 app.set('view engine', 'ejs');
-  
+
 /*gérer les liens statics avec le middleware 'use' */
 app.use('/assets' /*lien à appeler*/, express.static('assets' /*lien réel*/));
 
@@ -29,6 +29,10 @@ app.get('/Home', function(req, res){
   res.render('Home');
 });
 
+app.get('/', function(req, res){
+  res.render('Home');
+});
+
 app.get('/contact', function(req, res){
   res.render('Contact');
 });
@@ -41,6 +45,10 @@ app.get('/profil/:city', function(req, res){
   var données = {pays : 'France', monnaie : 'euro'};
   res.render('Profil', {city : req.params.city, données : données});
 });
+
+app.use(function (req, res, next) {
+      res.status(404).render('404');
+})
 
 app.listen (3000);
 
