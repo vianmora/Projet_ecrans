@@ -11,7 +11,7 @@ app.use('/assets' /*lien à appeler*/, express.static('assets' /*lien réel*/));
 
 /*routing simple
 app.get('/', function(req, res){
-  res.send("Bienvenue sur ma page d'accueil");
+  res.send("Bienvenue sur ma page d'accueil hahaha");
 });*/
 
 /*router des pages avec paramètres
