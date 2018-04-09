@@ -46,6 +46,7 @@ app.get('/profil/:city', function(req, res){
   res.render('Profil', {city : req.params.city, données : données});
 });
 
+/* ajout d'une condition 404 avec un middleware*/
 app.use(function (req, res, next) {
       res.status(404).render('404');
 })
