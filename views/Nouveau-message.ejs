@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+	<% include partials/Head.ejs %>
+
+	<body>
+		<header>
+			<h1>Projet Ecran</h1>
+			<h2>Contacte nous !</h2>
+		</header>
+
+		<a href = "Page-admin">Retour vers la page admin</a>
+
+		<section>
+			<p>
+				Ho oui !! Changeons de message !!
+			</p>
+		</section>
+
+		<form method ="POST" action = "/Nouveau-message">
+			<p>
+				<label for = 'new_message'>Quel message veux-tu faire passer ? <br /></label>
+				<textarea name = 'new_message' rows="10" cols="50">Voulez-vous coucher avec moi, ce soir ? 🎵 🎶 </textarea><br /><br />
+
+				<input type="submit" value="Envoyer" />
+			</p>
+		</form>
+
+		<% include partials/Footer.ejs %>
+
+	</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+	<% include partials/Head.ejs %>
+
+	<body>
+		<header>
+			<h1>Projet Ecran</h1>
+			<h2>Nouveau message !</h2>
+		</header>
+
+
+		<section>
+			<p>
+				votre message a bien été envoyé. Nous afficherons désormais :
+			</p>
+      <p>
+        <%= POST.new_message %>
+      </p>
+		</section>
+
+		<a href = "Page-admin">Retour vers la page admin</a>
+
+		<% include partials/Footer.ejs %>
+
+	</body>
+
+</html>

@@ -37,13 +37,29 @@ app.get('/', function(req, res){
   res.render('Home');
 });
 
+app.get('/Page-ecran', function(req, res){
+  res.render('page-ecran');
+});
+
+app.get('/Page-admin', function(req, res){
+  res.render('Admin');
+});
+
+app.get('/Nouveau-message', function(req, res){
+  res.render('Nouveau-message')
+})
+
+app.post('/Nouveau-message', urlencodedParser, function(req, res){
+  res.render('Nouveau-message-success',  {POST : req.body})
+})
+
 /* gérer la page contact avec des requète en query string et POST */
 app.get('/contact', function(req, res){
-  res.render('Contact', {qs:req.query});
+  res.render('Contact');
 });
 
 app.post('/contact', urlencodedParser, function(req, res){
-  if (!req.body) return res.sendStatus(400)
+  if (!req.body) return res.render('Contact', {qs:req.query});
   res.render('Contact-success', {POST : req.body});
 });
 
