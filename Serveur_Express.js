@@ -1,4 +1,5 @@
 var express = require ('express');
+var bodyparser = require('body-parser');
 
 /*créer un server vide*/
 var app = express();
@@ -8,6 +9,9 @@ app.set('view engine', 'ejs');
 
 /*gérer les liens statics avec le middleware 'use' */
 app.use('/assets' /*lien à appeler*/, express.static('assets' /*lien réel*/));
+
+/*gérer les requète POST avec le middleware 'body-parser'*/
+var urlencodedParser = bodyparser.urlencoded({ extended: false })
 
 /*routing simple
 app.get('/', function(req, res){
@@ -33,12 +37,14 @@ app.get('/', function(req, res){
   res.render('Home');
 });
 
+/* gérer la page contact avec des requète en query string et POST */
 app.get('/contact', function(req, res){
-  res.render('Contact');
+  res.render('Contact', {qs:req.query});
 });
 
-app.get('/contact-success', function(req, res){
-  res.render('Contact-success');
+app.post('/contact', urlencodedParser, function(req, res){
+  if (!req.body) return res.sendStatus(400)
+  res.render('Contact-success', {POST : req.body});
 });
 
 app.get('/profil/:city', function(req, res){
