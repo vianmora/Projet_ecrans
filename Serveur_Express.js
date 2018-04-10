@@ -53,6 +53,8 @@ app.post('/Nouveau-message', urlencodedParser, function(req, res){
   res.render('Nouveau-message-success',  {POST : req.body})
 })
 
+
+
 /* gérer la page contact avec des requète en query string et POST */
 app.get('/contact', function(req, res){
   res.render('Contact');
