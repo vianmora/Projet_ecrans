@@ -1,0 +1,1 @@
+Ce répertoire contient le code qui sera déposé sur le serveur auquel se connectera le Raspberry.
