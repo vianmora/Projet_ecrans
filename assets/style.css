@@ -8,10 +8,10 @@ body{
 
 a
 {
-color: grey;  
+color: grey;
 }
 a: hover
 {
-  font-size : 50px;
+  font-size : 1.3em;
   text-decoration: none;
 }
