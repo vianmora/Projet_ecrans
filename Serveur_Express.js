@@ -1,8 +1,10 @@
 var express = require ('express');
 var bodyparser = require('body-parser');
 
+
 /*créer un server vide*/
 var app = express();
+
 
 /*Utiliser le moteur de template ejs*/
 app.set('view engine', 'ejs');
