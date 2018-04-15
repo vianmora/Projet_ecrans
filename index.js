@@ -40,7 +40,6 @@ app.route('/contact')
   });
 
 /* routage parallèle pour la page admin*/
-
 var admin = require('./routes/admin');
 app.use('/Page-admin', admin);
 
@@ -50,5 +49,5 @@ app.use(function (req, res, next) {
 });
 
 app.listen (3000); // Ajout d'un port d'écoute pour la version en dévelopement
-//module.exports = app; // on exporte notre serveur "app"
+
 console.log("c'est bon, je t'écoute sur le port 3000"); //petit message sympa ;)
