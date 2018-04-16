@@ -1,11 +1,10 @@
-var express = require('express');
+var express = require('express'),
+    formidable = require('formidable'),
+    fs = require('fs'),
+    bodyParser = require('body-parser'),
+    path = require('path');
+
 var app_admin = express();
-
-var formidable = require('formidable');
-var fs = require('fs');
-
-var bodyParser = require('body-parser');
-var path = require('path');
 
 app_admin.use(bodyParser.json());
 app_admin.use(bodyParser.urlencoded({ extended: false }));
@@ -14,7 +13,7 @@ app_admin.get('/', function(req, res, next) {
   res.render('Admin');
 });
 
-app_admin.route('/Nouveau-message')
+app_admin.route('/Nouveau-message') // Pour changer simplement le message de la pae d'accueil
   .get(function(req, res, next){
     res.render('Nouveau-message');
   })
@@ -22,7 +21,7 @@ app_admin.route('/Nouveau-message')
     res.render('Nouveau-message-success',  {POST : req.body});
   });
 
-app_admin.route('/Nouvelle-page')
+app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
   .get(function(req, res, next){
     res.render('Nouvelle-page');
   })
@@ -30,14 +29,14 @@ app_admin.route('/Nouvelle-page')
     // create an incoming form object
     var form = new formidable.IncomingForm();
 
-    // specify that we want to allow the user to upload multiple files in a single request
+    // L'utilisateur peut importer plusieurs fichiers d'un coup
     form.multiples = true;
 
-    // store all uploads in the /uploads directory
+    // enregistrer les uploads dans le fichier /uploads
     form.uploadDir = path.join(__dirname, '/uploads');
 
     // every time a file has been uploaded successfully,
-    // // rename it to it's orignal name
+    // rename it to it's orignal name
     form.on('file', function(field, file) {
       fs.rename(file.path, path.join(form.uploadDir, file.name));
     });
@@ -47,13 +46,16 @@ app_admin.route('/Nouvelle-page')
       console.log('An error has occured: \n' + err);
     });
 
+    // parse the incoming request containing the form data
+    form.parse(req, (err, fields, files) => {
+      console.log("ok, file uploaded");
+    });
+
     // once all the files have been uploaded, send a response to the client
     form.on('end', function() {
       res.render('Nouvelle-page-success');
     });
 
-    // parse the incoming request containing the form data
-    form.parse(req);
 
   });
 
