@@ -9,10 +9,15 @@ body{
 a
 {
 color: grey;
+text-decoration: none;
 }
 a:hover
 {
   font-size : 1.3em;
   text-decoration: none;
   color: blue;
+}
+ul
+{
+list-style-type: none;
 }
