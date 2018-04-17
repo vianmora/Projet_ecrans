@@ -18,6 +18,8 @@ app_admin.route('/Nouveau-message') // Pour changer simplement le message de la 
     res.render('Nouveau-message');
   })
   .post(function(req, res){
+    console.log(req.body.new_message);
+    global.message = req.body.new_message;
     res.render('Nouveau-message-success',  {POST : req.body});
   });
 
