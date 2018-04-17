@@ -6,6 +6,8 @@ var express = require('express'),
 
 var app_admin = express();
 
+global.message = '"Prendre son temps est le meilleur moyen de ne pas en perdre _ Nicolas Bouvier"';
+
 app_admin.use(bodyParser.json());
 app_admin.use(bodyParser.urlencoded({ extended: false }));
 
@@ -28,30 +30,30 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
     res.render('Nouvelle-page');
   })
   .post(function(req, res, next){
-    // create an incoming form object
+    // Lorsqu'un fichier est uploadé:
+    // On crée un nouveau recepteur formidable (tableau de fichier)
     var form = new formidable.IncomingForm();
 
     // L'utilisateur peut importer plusieurs fichiers d'un coup
-    form.multiples = true;
+    form.multiples = false;
 
-    // enregistrer les uploads dans le fichier /uploads
-    form.uploadDir = path.join(__dirname, '/uploads');
+    // Enregistrer les uploads dans le fichier /uploads
+    form.uploadDir = path.join(__dirname, '..', '/views/uploads');
 
-    // every time a file has been uploaded successfully,
-    // rename it to it's orignal name
+    // On renomme chaque fichier reçu avec son nom originel
+    // A l'origine il a un nom du type "Upload029192..."
     form.on('file', function(field, file) {
-      fs.rename(file.path, path.join(form.uploadDir, file.name));
+      //fs.rename(file.path, path.join(form.uploadDir, file.name));
+      fs.rename(file.path, path.join(form.uploadDir, 'index.html'));
     });
 
-    // log any errors that occur
+    // informer en cas d'erreur
     form.on('error', function(err) {
       console.log('An error has occured: \n' + err);
     });
 
     // parse the incoming request containing the form data
-    form.parse(req, (err, fields, files) => {
-      console.log("ok, file uploaded");
-    });
+    form.parse(req);
 
     // once all the files have been uploaded, send a response to the client
     form.on('end', function() {
@@ -60,5 +62,13 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
 
 
   });
+
+app_admin.get('/Reinitialisation', function(req, res, next) {
+  fs.copyFile(path.join(__dirname, '..', '/views/uploads/index0.html'), path.join(__dirname, '..', '/views/uploads/index.html'), (err) => {
+    if (err) throw err;
+    console.log("file copied");
+  });
+  res.render('page-ecran-restaure');
+});
 
 module.exports = app_admin;

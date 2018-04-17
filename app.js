@@ -11,9 +11,7 @@ app.use('/assets' /*lien à appeler*/, express.static('assets' /*lien réel*/));
 // récupérer les données
 app.use(bodyparser.urlencoded({ extended: false }));
 
-var admin = require('./routes/admin');
-
-global.message = '"Prendre son temps est le meilleur moyen de ne pas en perdre _ Nicolas Bouvier"';
+var app_admin = require('./routes/admin');
 
 /* premier routage */
 
@@ -43,7 +41,7 @@ app.route('/contact')
   });
 
 /* routage parallèle pour la page admin*/
-app.use('/Page-admin', admin);
+app.use('/Page-admin', app_admin);
 
 /* ajout d'une condition 404 avec un middleware*/
 app.use(function (req, res, next) {
