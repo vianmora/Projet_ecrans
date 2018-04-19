@@ -38,13 +38,13 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
     form.multiples = false;
 
     // Enregistrer les uploads dans le fichier /uploads
-    form.uploadDir = path.join(__dirname, '..', '/views/uploads');
+    form.uploadDir = path.join(__dirname, '..', '/views');
 
     // On renomme chaque fichier reçu avec son nom originel
     // A l'origine il a un nom du type "Upload029192..."
     form.on('file', function(field, file) {
       //fs.rename(file.path, path.join(form.uploadDir, file.name));
-      fs.rename(file.path, path.join(form.uploadDir, 'index.html'));
+      fs.rename(file.path, path.join(form.uploadDir, 'page-ecran.ejs'));
     });
 
     // informer en cas d'erreur
@@ -64,7 +64,7 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
   });
 
 app_admin.get('/Reinitialisation', function(req, res, next) {
-  fs.copyFile(path.join(__dirname, '..', '/views/uploads/index0.html'), path.join(__dirname, '..', '/views/uploads/index.html'), (err) => {
+  fs.copyFile(path.join(__dirname, '..', '/views/page-ecran0.ejs'), path.join(__dirname, '..', '/views/page-ecran.ejs'), (err) => {
     if (err) throw err;
     console.log("file copied");
   });
