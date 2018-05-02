@@ -12,7 +12,7 @@ app_admin.use(bodyParser.json());
 app_admin.use(bodyParser.urlencoded({ extended: false }));
 
 app_admin.get('/', function(req, res, next) {
-  res.render('Admin');
+  res.render('a_admin');
 });
 
 app_admin.route('/Nouveau-message') // Pour changer simplement le message de la pae d'accueil
@@ -44,7 +44,7 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
     // A l'origine il a un nom du type "Upload029192..."
     form.on('file', function(field, file) {
       //fs.rename(file.path, path.join(form.uploadDir, file.name));
-      fs.rename(file.path, path.join(form.uploadDir, 'page-ecran.ejs'));
+      fs.rename(file.path, path.join(form.uploadDir, 'uploads/salut.html'));
     });
 
     // informer en cas d'erreur
