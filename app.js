@@ -10,13 +10,19 @@ app.set('view engine', 'ejs'); // Utiliser le moteur de template ejs
 // les liens static
 app.use('/assets' /*lien à appeler*/, express.static('assets' /*lien réel*/));
 
-
-
 // récupérer les données
 app.use(bodyparser.urlencoded({ extended: false }));
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/views/uploads/index.html');
+  res.render('home');
+});
+
+app.get('/Page-message', function(req, res){
+  res.render('message-page');
+});
+
+app.get('/Page-ecran', function(req, res){
+  res.render('screen-page');
 });
 
 var app_admin = require('./routes/admin');

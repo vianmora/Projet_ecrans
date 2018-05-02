@@ -12,7 +12,7 @@ app_admin.use(bodyParser.json());
 app_admin.use(bodyParser.urlencoded({ extended: false }));
 
 app_admin.get('/', function(req, res, next) {
-  res.render('Admin');
+  res.render('a_admin');
 });
 
 app_admin.route('/Nouveau-message') // Pour changer simplement le message de la pae d'accueil
