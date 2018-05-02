@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+	<% include partials/Head.ejs %>
+
+	<body>
+		<header>
+		  <h1>Projet Ecran</h1>
+			<h2>Page d'accueil</h2>
+		</header>
+
+		<% include partials/Navigation.ejs %>
+
+		<section>
+			<h3>
+				Bienvenue cher administrateur !
+			</h3>
+
+      <p>
+        voici la page html que nous allons afficher
+      </p>
+      <HR />
+      <section>
+        <% include uploads/index.html %>
+      </section>
+
+      <% include partials/Footer.ejs %>
+
+	</body>
+
+</html>

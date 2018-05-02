@@ -6,57 +6,69 @@ var express = require('express'),
 
 var app_admin = express();
 
+global.message = '"Prendre son temps est le meilleur moyen de ne pas en perdre _ Nicolas Bouvier"';
+
 app_admin.use(bodyParser.json());
 app_admin.use(bodyParser.urlencoded({ extended: false }));
 
 app_admin.get('/', function(req, res, next) {
-  res.render('Admin');
+  res.render('a_admin');
 });
 
 app_admin.route('/Nouveau-message') // Pour changer simplement le message de la pae d'accueil
   .get(function(req, res, next){
-    res.render('Nouveau-message');
+    res.render('a_new-message');
   })
   .post(function(req, res){
-    res.render('Nouveau-message-success',  {POST : req.body});
+    console.log(req.body.new_message);
+    global.message = req.body.new_message;
+    res.render('a_new-message-success',  {POST : req.body});
   });
 
 app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
   .get(function(req, res, next){
-    res.render('Nouvelle-page');
+    res.render('a_new-screen-page');
   })
   .post(function(req, res, next){
-    // create an incoming form object
+    // Lorsqu'un fichier est uploadé:
+    // On crée un nouveau recepteur formidable (tableau de fichier)
     var form = new formidable.IncomingForm();
 
     // L'utilisateur peut importer plusieurs fichiers d'un coup
-    form.multiples = true;
+    form.multiples = false;
 
-    // enregistrer les uploads dans le fichier /uploads
-    form.uploadDir = path.join(__dirname, '/uploads');
+    // Enregistrer les uploads dans le fichier /uploads
+    form.uploadDir = path.join(__dirname, '..', '/views');
 
-    // every time a file has been uploaded successfully,
-    // rename it to it's orignal name
+    // On renomme chaque fichier reçu avec son nom originel
+    // A l'origine il a un nom du type "Upload029192..."
     form.on('file', function(field, file) {
-      fs.rename(file.path, path.join(form.uploadDir, file.name));
+      //fs.rename(file.path, path.join(form.uploadDir, file.name));
+      fs.rename(file.path, path.join(form.uploadDir, 'uploads/salut.html'));
     });
 
-    // log any errors that occur
+    // informer en cas d'erreur
     form.on('error', function(err) {
       console.log('An error has occured: \n' + err);
     });
 
     // parse the incoming request containing the form data
-    form.parse(req, (err, fields, files) => {
-      console.log("ok, file uploaded");
-    });
+    form.parse(req);
 
     // once all the files have been uploaded, send a response to the client
     form.on('end', function() {
-      res.render('Nouvelle-page-success');
+      res.render('a_new-screen-page-success');
     });
 
 
   });
+
+app_admin.get('/Reinitialisation', function(req, res, next) {
+  fs.copyFile(path.join(__dirname, '..', '/views/page-ecran0.ejs'), path.join(__dirname, '..', '/views/page-ecran.ejs'), (err) => {
+    if (err) throw err;
+    console.log("file copied");
+  });
+  res.render('a_new-screen-page-succes');
+});
 
 module.exports = app_admin;
