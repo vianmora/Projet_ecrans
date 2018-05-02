@@ -17,17 +17,17 @@ app_admin.get('/', function(req, res, next) {
 
 app_admin.route('/Nouveau-message') // Pour changer simplement le message de la pae d'accueil
   .get(function(req, res, next){
-    res.render('Nouveau-message');
+    res.render('a_new-message');
   })
   .post(function(req, res){
     console.log(req.body.new_message);
     global.message = req.body.new_message;
-    res.render('Nouveau-message-success',  {POST : req.body});
+    res.render('a_new-message-success',  {POST : req.body});
   });
 
 app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
   .get(function(req, res, next){
-    res.render('Nouvelle-page');
+    res.render('a_new-screen-page');
   })
   .post(function(req, res, next){
     // Lorsqu'un fichier est uploadé:
@@ -57,7 +57,7 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
 
     // once all the files have been uploaded, send a response to the client
     form.on('end', function() {
-      res.render('Nouvelle-page-success');
+      res.render('a_new-screen-page-success');
     });
 
 
@@ -68,7 +68,7 @@ app_admin.get('/Reinitialisation', function(req, res, next) {
     if (err) throw err;
     console.log("file copied");
   });
-  res.render('page-ecran-restaure');
+  res.render('a_new-screen-page-succes');
 });
 
 module.exports = app_admin;
