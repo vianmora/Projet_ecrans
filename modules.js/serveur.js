@@ -20,7 +20,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/Page-message', function(req, res){
-  var message = JSON.parse(fs.readFileSync('./Messages.JSON', 'UTF-8'));
+  var message = JSON.parse(fs.readFileSync('./messages_JSON/Message.JSON', 'UTF-8'));
   console.log(message);
   res.render('message-page', {message : message.texte});
 });
