@@ -13,7 +13,7 @@ logger.add(new winston.transports.Console(
 
 /* pour avoir un fichier log */
 
-logger.add(new winston.transports.File({ filename: './modules.js/error.log', level: 'error' }));
-logger.add(new winston.transports.File({ filename: './modules.js/combined.log', level: 'silly'}));
+logger.add(new winston.transports.File({ filename: './log/error.log', level: 'error' }));
+logger.add(new winston.transports.File({ filename: './log/combined.log', level: 'silly'}));
 
 module.exports = logger;

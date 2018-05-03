@@ -4,9 +4,9 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     path = require('path');
 
-var app_admin = express();
+var modifier_JSON = require('./messages.js');
 
-global.message = '"Prendre son temps est le meilleur moyen de ne pas en perdre _ Nicolas Bouvier"';
+var app_admin = express();
 
 app_admin.use(bodyParser.json());
 app_admin.use(bodyParser.urlencoded({ extended: false }));
@@ -15,13 +15,17 @@ app_admin.get('/', function(req, res, next) {
   res.render('a_admin');
 });
 
+// décommenter si le fichier n'est pas encore créé
+//fs.writeFileSync("./Messages.JSON", '{"date":"2018-05-03T17:57:51.888Z","texte":"Prendre son temps est le meilleur moyen de ne pas en perdre _ Nicolas Bouvier"}', 'UTF-8');
+
+
 app_admin.route('/Nouveau-message') // Pour changer simplement le message de la pae d'accueil
   .get(function(req, res, next){
     res.render('a_new-message');
   })
   .post(function(req, res){
-    console.log(req.body.new_message);
-    global.message = req.body.new_message;
+    console.log("nouveau message : "+ req.body.new_message);
+    modifier_JSON(req.body.new_message);
     res.render('a_new-message-success',  {POST : req.body});
   });
 

@@ -1,4 +1,5 @@
 var express = require ('express'); // Pour créer un serveur de type Express
+var fs = require('fs');
 var bodyparser = require('body-parser'); // Pour récupérer les données envoyées de page en page
 var logger = require('./logger');
 
@@ -19,7 +20,9 @@ app.get('/', function(req, res){
 });
 
 app.get('/Page-message', function(req, res){
-  res.render('message-page');
+  var message = JSON.parse(fs.readFileSync('./Messages.JSON', 'UTF-8'));
+  console.log(message);
+  res.render('message-page', {message : message.texte});
 });
 
 /*app.get('/Page-ecran', function(req, res){

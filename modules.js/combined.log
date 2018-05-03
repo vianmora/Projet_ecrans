@@ -1,8 +1,0 @@
-info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T14:37:46.334Z"}
-silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T14:37:46.335Z"}
-debug: url: /Page-ecran {"timestamp":"2018-05-03T14:38:01.298Z"}
-info: 404 for: /Page-ecran {"timestamp":"2018-05-03T14:38:01.298Z"}
-debug: url: /Page-ecran {"timestamp":"2018-05-03T14:38:04.555Z"}
-info: 404 for: /Page-ecran {"timestamp":"2018-05-03T14:38:04.556Z"}
-debug: url: /Page-ecran {"timestamp":"2018-05-03T14:42:40.076Z"}
-info: 404 for: /Page-ecran {"timestamp":"2018-05-03T14:42:40.084Z"}

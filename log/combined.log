@@ -1,0 +1,94 @@
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T14:37:46.334Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T14:37:46.335Z"}
+debug: url: /Page-ecran {"timestamp":"2018-05-03T14:38:01.298Z"}
+info: 404 for: /Page-ecran {"timestamp":"2018-05-03T14:38:01.298Z"}
+debug: url: /Page-ecran {"timestamp":"2018-05-03T14:38:04.555Z"}
+info: 404 for: /Page-ecran {"timestamp":"2018-05-03T14:38:04.556Z"}
+debug: url: /Page-ecran {"timestamp":"2018-05-03T14:42:40.076Z"}
+info: 404 for: /Page-ecran {"timestamp":"2018-05-03T14:42:40.084Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T15:32:33.983Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T15:32:33.983Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T15:39:23.353Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T15:39:23.353Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:05:41.907Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:05:41.909Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:05:43.526Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:05:43.529Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:05:44.699Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:05:44.702Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:05:45.821Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:05:45.829Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:05:47.102Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:05:47.104Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:05:48.288Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:05:48.292Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:05:49.731Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:05:49.734Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:05:50.945Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:05:50.947Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:06:49.206Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:06:49.208Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:07:41.487Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:07:41.489Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:09:42.231Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:09:42.233Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:12:10.885Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:12:10.887Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:13:51.566Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:13:51.568Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:20:26.582Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:20:26.585Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:21:06.628Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:21:06.628Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:21:45.968Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:21:45.968Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:22:10.088Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:22:10.090Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:22:11.255Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:22:11.259Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:22:12.404Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:22:12.419Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:22:13.627Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:22:13.630Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:22:15.559Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:22:15.561Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:24:03.241Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:24:03.243Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:24:19.032Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:24:19.034Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:24:57.379Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:24:57.381Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:29:32.169Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:29:32.172Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:29:36.666Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:29:36.668Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:30:08.658Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:30:08.661Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:30:24.865Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:30:24.867Z"}
+debug: url: /Page-ecran {"timestamp":"2018-05-03T18:31:08.620Z"}
+info: 404 for: /Page-ecran {"timestamp":"2018-05-03T18:31:08.621Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:31:54.224Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:31:54.224Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:32:18.341Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:32:18.342Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:33:12.174Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:33:12.189Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:33:19.828Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:33:19.830Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:33:35.958Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:33:35.958Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:33:46.006Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:33:46.008Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:34:33.465Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:34:33.467Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:34:41.323Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:34:41.327Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:34:42.479Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:34:42.479Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:34:43.810Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:34:43.815Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:34:45.003Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:34:45.003Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T18:34:46.147Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T18:34:46.147Z"}
