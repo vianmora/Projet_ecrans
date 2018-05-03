@@ -11,6 +11,6 @@
     "express": "^4.16.3",
     "formidable": "^1.2.1",
     "nodemailer": "^4.6.4",
-    "php": "0.0.1"
+    "winston": "^3.0.0-rc5"
   }
 }
