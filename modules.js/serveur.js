@@ -1,7 +1,8 @@
 var express = require ('express'); // Pour créer un serveur de type Express
-var fs = require('fs');
+var fs = require('fs'); //traitement des fichiers
 var bodyparser = require('body-parser'); // Pour récupérer les données envoyées de page en page
-var logger = require('./logger');
+var logger = require('./logger'); //logger : winston
+var path = require('path'); //outils de gestion des chemins
 
 /* Le serveur en lui même*/
 
@@ -14,6 +15,7 @@ app.use(bodyparser.urlencoded({ extended: false }));
 
 // les liens static
 app.use('/assets' /*lien à appeler*/, express.static('assets' /*lien réel*/));
+//app.use('/static' /*lien à appeler*/, express.static('static' /*lien réel*/));
 
 app.get('/', function(req, res){
   res.render('home');
@@ -21,13 +23,12 @@ app.get('/', function(req, res){
 
 app.get('/Page-message', function(req, res){
   var message = JSON.parse(fs.readFileSync('./messages_JSON/Message.JSON', 'UTF-8'));
-  console.log(message);
   res.render('message-page', {message : message.texte});
 });
 
-/*app.get('/Page-ecran', function(req, res){
-  res.render('screen-page');
-});*/
+app.get('/Page-ecran', function(req, res){
+  res.sendFile(path.join(__dirname,'..', 'static/uploads/index.html'));
+});
 
 /* Utiliser un sous-serveur pour les routes admins */
 

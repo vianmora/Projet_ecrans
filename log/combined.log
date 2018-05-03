@@ -202,3 +202,103 @@ info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05
 silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:36:25.333Z"}
 info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:36:38.450Z"}
 silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:36:38.452Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:41:02.868Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:41:02.868Z"}
+debug: url: /Page-ecran {"timestamp":"2018-05-03T19:41:13.636Z"}
+info: 404 for: /Page-ecran {"timestamp":"2018-05-03T19:41:13.636Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:42:39.602Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:42:39.603Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:45:20.851Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:45:20.851Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:45:56.921Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:45:56.923Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:46:17.115Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:46:17.115Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:47:50.515Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:47:50.517Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:48:15.453Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:48:15.453Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:51:09.070Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:51:09.072Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:51:22.209Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:51:22.209Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:52:12.298Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:52:12.300Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:52:20.534Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:52:20.535Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:52:55.190Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:52:55.192Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:53:04.910Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:53:04.910Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:53:20.810Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:53:20.813Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:53:56.711Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:53:56.713Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:54:19.195Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:54:19.195Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:54:46.872Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:54:46.872Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:55:09.836Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:55:09.838Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:55:50.540Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:55:50.542Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:57:00.003Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:57:00.005Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T19:58:54.404Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T19:58:54.407Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T20:00:52.226Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T20:00:52.226Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:01:05.756Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:01:05.757Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:01:06.037Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:01:06.038Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T20:03:12.441Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T20:03:12.446Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:03:15.722Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:03:15.723Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:03:15.887Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:03:15.887Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T20:06:04.624Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T20:06:04.626Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:06:44.231Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:06:44.231Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:06:44.405Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:06:44.405Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T20:09:19.838Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T20:09:19.838Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:09:23.068Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:09:23.068Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:09:23.179Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:09:23.179Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T20:09:57.677Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T20:09:57.677Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T20:10:06.589Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T20:10:06.589Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T20:10:48.137Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T20:10:48.137Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:10:50.782Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:10:50.783Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:10:50.895Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:10:50.895Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T20:12:19.769Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T20:12:19.770Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:12:20.408Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:12:20.408Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:12:20.566Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:12:20.566Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T20:14:52.472Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T20:14:52.487Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:15:01.931Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:15:01.932Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:15:02.026Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:15:02.026Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:15:38.520Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:15:38.520Z"}
+debug: url: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:15:38.609Z"}
+info: 404 for: /node_modules/materialize-css/dist/js/materialize.min.js {"timestamp":"2018-05-03T20:15:38.610Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T20:16:44.057Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T20:16:44.059Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T20:17:07.265Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T20:17:07.267Z"}
+info: début du log général, on écoute sur le port 3000 {"timestamp":"2018-05-03T20:17:44.906Z"}
+silly: début du log précis en mode 'silly' {"timestamp":"2018-05-03T20:17:44.908Z"}
