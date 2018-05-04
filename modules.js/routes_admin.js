@@ -72,4 +72,8 @@ app_admin.get('/Reinitialisation', function(req, res, next) {
   res.render('a_new-screen-page-success');
 });
 
+app_admin.get('/historique_messages', funciton(req, res, next){
+  f
+})
+
 module.exports = app_admin;
