@@ -14,7 +14,7 @@ app.use('/assets' /*lien à appeler*/, express.static('assets' /*lien réel*/));
 app.use(bodyparser.urlencoded({ extended: false }));
 
 app.get('/', function(req, res){
-  res.render('home');
+  res.render('essais-bootstrap.ejs');
 });
 
 app.get('/Page-message', function(req, res){
