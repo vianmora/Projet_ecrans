@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+  <% include partials/head.ejs %>
+
+	<body>
+
+		<header>
+		  <h1>Projet Ecran</h1>
+      <p>
+        <nav>
+          <ul>
+            <li> <a href = '/'>Accueil</a> </li>
+            <li> <a href = '/Page-message'>Message du jour</a> </li>
+            <li> <a href = '/Page-ecran'>Page ecran</a> </li>
+            <li> <a href = '/Page-admin'>Page admin</a> </li>
+          </ul>
+        </nav>
+
+      </p>
+			<h2>Page admin : Historique de la page message</h2>
+		</header>
+
+		<section>
+			<p>
+        <% messages.forEach(function(m){ %>
+          <header>
+            message n° <%= m.numero; %> <br />
+            date : <%= m.date; %>
+          </header>
+          <section>
+            <%= m.texte; %>
+            <br /><br />
+          </section>
+        <% }); %>
+			</p>
+		</section>
+
+	</body>
+
+</html>

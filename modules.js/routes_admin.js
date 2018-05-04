@@ -72,4 +72,20 @@ app_admin.get('/Reinitialisation', function(req, res, next) {
   res.render('a_new-screen-page-success');
 });
 
+app_admin.get('/historique_messages', function(req, res, next){
+  var dernier_message = JSON.parse(fs.readFileSync('./messages_JSON/Message.JSON', 'UTF-8'));
+  var nb_message = dernier_message.numero;
+
+  var tab = [];
+
+  for (var i=0; i<nb_message; i++){
+    var fichier_JSON = JSON.parse(fs.readFileSync('./messages_JSON/Message_' + i + '.JSON', 'UTF-8'));
+    tab[i] = fichier_JSON;
+  };
+
+  tab[nb_message] =  dernier_message;
+  console.log(tab);
+  res.render('a_historique', {messages : tab} );
+});
+
 module.exports = app_admin;
