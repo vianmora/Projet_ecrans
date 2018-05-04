@@ -7,16 +7,7 @@
 
 		<header>
 		  <h1>Projet Ecran</h1>
-			<h2>Page d'accueil</h2>
-		</header>
-
-		<section>
-			<p>
-				Bienvenue Sur la page d'accueil de notre projet, profitez bien de votre visite !
-			</p>
-
       <p>
-        nous vous proposons :
         <nav>
           <ul>
             <li> <a href = '/'>Accueil</a> </li>
@@ -27,6 +18,22 @@
         </nav>
 
       </p>
+			<h2>Page admin : Historique de la page message</h2>
+		</header>
+
+		<section>
+			<p>
+        <% messages.forEach(function(m){ %>
+          <header>
+            message n° <%= m.numero; %> <br />
+            date : <%= m.date; %>
+          </header>
+          <section>
+            <%= m.texte; %>
+            <br /><br />
+          </section>
+        <% }); %>
+			</p>
 		</section>
 
 	</body>
