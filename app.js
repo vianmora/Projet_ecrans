@@ -1,15 +1,15 @@
-var express = require ('express'); // Pour créer un serveur de type Express
-var bodyparser = require('body-parser'); // Pour récupérer les données envoyées de page en page
+var logger = require('./modules.js/logger');
+var serveur = require('./modules.js/serveur.js');
 
-var app = express(); // créer un server vide
+var port = 3000;
 
-app.set('view engine', 'ejs'); // Utiliser le moteur de template ejs
+serveur.listen(port); // Ajout d'un port d'écoute pour la version en dévelopement
 
-/* Paramétrer les middlewares */
+//petit message sympa ;)
 
-// les liens static
-app.use('/assets' /*lien à appeler*/, express.static('assets' /*lien réel*/));
+console.log("c'est bon on t'écoute sur le port " + port.toString());
 
+<<<<<<< HEAD
 // récupérer les données
 app.use(bodyparser.urlencoded({ extended: false }));
 
@@ -36,6 +36,10 @@ app.use(function (req, res, next) {
 app.listen (3000); // Ajout d'un port d'écoute pour la version en dévelopement
 
 console.log("c'est bon, je t'écoute sur le port 3000"); //petit message sympa ;)*
+=======
+logger.info("début du log général, on écoute sur le port " + port.toString());
+logger.silly("début du log précis en mode 'silly'");
+>>>>>>> 1d8db3d8c857384c985e9f76e9c88ebc2cdaa49f
 
 /*dézippe
 message simple
