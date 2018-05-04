@@ -2,16 +2,20 @@ Ce repertoire contient le code qui sera dipos sur le serveur auquel se connecter
 
 Les routes :
 
-app.js : serveur principal
-  |-- ecran.js : serveur pour afficher la page ecran
-  |-- admin.js : serveur secondaire
+app.js : application principale qui utilise les sous-serveurs et modules annexes de modules_js
+  |-- routes_admin.js : serveur pour gérer la page admin
+  |-- serveur.js : routes principales utilisées par la Page
+  |-- messages.js : quelques fonctions pour gérer la page message du jour
+  |-- logger.js : logger winston utilisé par le projet
 
 fonctionnalités :
 
-ecran.js :
-  | -> affiche une page fixe défini par l'utilisateur. par défault, cette page affiche un simple message modifiable dans le menu app_admin
+du serveur principal :
+  | -> afficher une page avec un message du jour
+  | -> affiche une page html fixe défini par l'utilisateur.
 
-admin.js : permet de modifier la page écran
-  | -> en modifiant le message envoyé. tous les messages sont stockés dans un fichier txt, précédé par leur date de création
+du serveur admin : permet de modifier les données utilisées par le serveur principal
+  | -> en modifiant le message du jour. tous les messages sont stockés dans des fichier JSON
   | -> en important sa propre page web static sous format zip
   | -> en réinitialisant la page originale
+  | -> en consultant l'historique des messages envoyés
