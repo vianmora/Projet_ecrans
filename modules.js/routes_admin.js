@@ -85,6 +85,9 @@ app_admin.get('/historique_messages', function(req, res, next){
 
   tab[nb_message] =  dernier_message;
   console.log(tab);
+
+  
+
   res.render('a_historique', {messages : tab} );
 });
 
