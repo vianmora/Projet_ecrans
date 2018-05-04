@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>accueil - 3francs6sous </title>
+        <link rel="stylesheet" href="style2.css" />
+    </head>
+    <body>
+        <div class = 'Intérieur'>
+        <header>
+        <h1>Bienvenue sur le site de La fanfare 3francs6sous</h1>
+        <!--description de La fanfare.-->
+        <nav class = "menu">
+            <ul id = 'menu'>
+            <li><a href="accueil.html"> Accueil</a></li>
+            <li><a href = "https://leblogdelafanfare3francs6sous.wordpress.com/">Notre Blog</a></li>
+            <li><a href = "Le projet.html">Qui sommes-nous ?</a></li>
+            <li><a href="Photos et vidéos.html"> Photos et vidéos</a></li>
+            
+            </ul>
+        </nav>
+        </header>
+        <div class= "bannière">
+            <!--<div id="banniere_description">
+                <p>Répetition au parc longchamp</p>
+            </div>-->
+
+        </div>
+        
+        <div id = 'corps'>
+            <section class="description_du_projet">
+                <aside class= 'plaquette'>
+                    <br><a href='Plaquette.zip' Class= 'télécharger_plaquette' >Télécharger notre plaquette.</a>
+                </aside>
+                <article class='une_fanfare'>
+                    
+                
+                <h2>Une Fanfare Solidaire.</h2>
+                <p>3francs6sous, est un groupe de 11 étudiants de l'école Centrale de Marseille, ayant une
+                passion en cummun: La musique. Membres de la Farigoule, La fanfare de notre école, nous avons décidé de vivre ensemble
+                un projet basé sur la culture, et la solidarité. Pendant 6 mois, nous irons en Asie et en Amérique du Sud où nous nous impliquerons dans des projets culturels et solidaires locaux.
+                Nous Travaillerons notament avec des ONG d'aide à l'enfance en Asie ou nous organiserons des ateliers d'éveil musicale aux enfants.
+                </p>
+                <p>Sur ce site, vous pourrez suivre nos aventures tout au long du projet. </p>
+                </article>
+            
+            
+            </section>
+        
+            <section  class="prochaines_dates">
+                <h2>Nos prochaines dates : </h2>
+                <p><span class="date">17 fevrier 2018</span><br />Au carsoussel sur la canebière<br /><span class="description">MP2018 "mais quel amour" </span></p>
+            </section>
+            
+            
+            </section>
+        </div>
+        <footer>
+            <h3>Nous contacter:</h3>
+            <p>Tel 3F6S:<br> 06 69 69 69 69</p>
+            <a href="https://www.facebook.com/3Francs6Sous-1605012226188884/?ref=br_rs" class= "facebook">Notre facebook</a>
+            <a href="http://www.fanfare-farigoule.com/" class="site_farigoule" >Notre fanfare d'origine :  la Farigoule</a>
+        </footer>
+    </body>
+</html>
