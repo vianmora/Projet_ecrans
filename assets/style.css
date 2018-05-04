@@ -1,26 +1,21 @@
 body{
+  margin-top: 70px;
   padding : 20px ;
   background-color : #70b6ee ;
   text-align : center;
   color : rgb(254, 254, 254) ;
   font-family: sans-serif;
 }
-<<<<<<< HEAD
 
-a
+
+.menu_admin
 {
-color: grey;
-text-decoration: none;
+  font-size: 2em;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
-a:hover
-{
-  font-size : 1.3em;
-  text-decoration: none;
-  color: blue;
-}
+
 ul
 {
 list-style-type: none;
 }
-=======
->>>>>>> fb5bc1834db694263c067b51939d833068595300
