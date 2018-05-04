@@ -4,7 +4,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     path = require('path');
 
-var modifier_JSON = require('./messages.js');
+var outils_messages = require('./messages.js');
 
 var app_admin = express();
 
@@ -25,7 +25,7 @@ app_admin.route('/Nouveau-message') // Pour changer simplement le message de la 
   })
   .post(function(req, res){
     console.log("nouveau message : "+ req.body.new_message);
-    modifier_JSON(req.body.new_message);
+    outils_messages.add_new_message(req.body.new_message);
     res.render('a_new-message-success',  {POST : req.body});
   });
 
@@ -73,6 +73,11 @@ app_admin.get('/Reinitialisation', function(req, res, next) {
 });
 
 app_admin.get('/historique_messages', function(req, res, next){
+
+  if (req.query.reinit === "1"){
+    outils_messages.reinit_history();
+  };
+
   var dernier_message = JSON.parse(fs.readFileSync('./messages_JSON/Message.JSON', 'UTF-8'));
   var nb_message = dernier_message.numero;
 
@@ -84,9 +89,6 @@ app_admin.get('/historique_messages', function(req, res, next){
   };
 
   tab[nb_message] =  dernier_message;
-  console.log(tab);
-
-  
 
   res.render('a_historique', {messages : tab} );
 });
