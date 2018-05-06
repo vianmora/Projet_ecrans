@@ -24,7 +24,6 @@ app_admin.route('/Nouveau-message') // Pour changer simplement le message de la 
     res.render('a_new-message');
   })
   .post(function(req, res){
-    console.log("nouveau message : "+ req.body.new_message);
     outils_messages.add_new_message(req.body.new_message);
     res.render('a_new-message-success',  {POST : req.body});
   });

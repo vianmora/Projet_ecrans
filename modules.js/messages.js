@@ -9,7 +9,6 @@ var modifier_JSON = function (texte){
   var i = message.numero;
 
   fs.copyFileSync('./messages_JSON/Message.JSON', './messages_JSON/Message_' + i +'.JSON');
-  console.log(i);
 
   var message = JSON.parse(fs.readFileSync('./messages_JSON/Message.JSON', 'UTF-8'));
 
@@ -24,12 +23,10 @@ var modifier_JSON = function (texte){
 var reinit_history = function (){
   var dernier_message = JSON.parse(fs.readFileSync('./messages_JSON/Message.JSON', 'UTF-8'));
   var nb_messages = dernier_message.numero;
-  console.log("hey");
   for (var i=0 ; i<nb_messages ; i++){
     fs.unlinkSync('./messages_JSON/Message_' + i +'.JSON');
   };
   dernier_message.numero = 0;
-  dernier_message.texte = "We are all in the gutter, but some of us are looking at the stars."
   chaine = JSON.stringify(dernier_message);
   fs.writeFileSync('./messages_JSON/Message.JSON', chaine, 'UTF-8');
 };
