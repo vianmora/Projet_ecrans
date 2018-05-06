@@ -3,6 +3,7 @@ var express = require('express'),
     fs = require('fs'),
     bodyParser = require('body-parser'),
     path = require('path');
+    unzip = require('unzip');
 
 var outils_messages = require('./messages.js');
 
@@ -79,13 +80,13 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
       form.multiples = false;
 
       // Enregistrer les uploads dans le fichier /uploads
-      form.uploadDir = path.join(__dirname, '..', '/static/uploads');
+      form.uploadDir = path.join(__dirname, '..', '/static/archives');
 
       // On renomme chaque fichier reçu avec son nom originel
       // A l'origine il a un nom du type "Upload029192..."
       form.on('file', function(field, file) {
         //fs.rename(file.path, path.join(form.uploadDir, file.name));
-        fs.rename(file.path, path.join(form.uploadDir, '/index.html'));
+        fs.rename(file.path, path.join(form.uploadDir, '/archive.zip'));
       });
 
       // informer en cas d'erreur
@@ -98,6 +99,7 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
 
       // once all the files have been uploaded, send a response to the client
       form.on('end', function() {
+        fs.createReadStream(__dirname, '..', '/static/archives/archive.zip').pipe(unzip.Extract({ path: 'output/path' }));
         res.render('a_new-screen-page-success');
       });
 
