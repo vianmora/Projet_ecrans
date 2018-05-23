@@ -1,11 +1,12 @@
-var express = require('express'),
-    formidable = require('formidable'),
-    fs = require('fs'),
-    bodyParser = require('body-parser'),
-    path = require('path');
+/* imports de modules */
+
+var express = require('express');
+var formidable = require('formidable');
+var fs = require('fs');
+var bodyParser = require('body-parser');
+var path = require('path');
 
 var outils_messages = require('./messages.js');
-
 var app_admin = express();
 
 app_admin.use(bodyParser.json());
@@ -16,7 +17,7 @@ app_admin.get('/', function(req, res, next) {
 });
 
 // décommenter si le fichier n'est pas encore créé
-//fs.writeFileSync("./Messages.JSON", '{"date":"2018-05-03T17:57:51.888Z","texte":"Prendre son temps est le meilleur moyen de ne pas en perdre _ Nicolas Bouvier"}', 'UTF-8');
+//fs.writeFileSync("./messages_JSON/Messages.JSON", '{"date":"2018-05-03T17:57:51.888Z","texte":"Prendre son temps est le meilleur moyen de ne pas en perdre _ Nicolas Bouvier"}', 'UTF-8');
 
 
 app_admin.route('/Nouveau-message') // Pour changer simplement le message de la pae d'accueil

@@ -1,8 +1,16 @@
+/* import de modules */
+
 var express = require ('express'); // Pour créer un serveur de type Express
 var fs = require('fs'); //traitement des fichiers
 var bodyparser = require('body-parser'); // Pour récupérer les données envoyées de page en page
-var logger = require('./logger'); //logger : winston
 var path = require('path'); //outils de gestion des chemins
+
+var logger = require('./logger'); //logger : winston
+
+/* variables utiles */
+
+var message = JSON.parse(fs.readFileSync('./messages_JSON/Message.JSON', 'UTF-8'));
+var ecran = path.join(__dirname,'..', 'static/uploads/index.html');
 
 /* Le serveur en lui même*/
 
@@ -22,12 +30,11 @@ app.get('/', function(req, res){
 });
 
 app.get('/Page-message', function(req, res){
-  var message = JSON.parse(fs.readFileSync('./messages_JSON/Message.JSON', 'UTF-8'));
   res.render('message-page', {message : message.texte});
 });
 
 app.get('/Page-ecran', function(req, res){
-  res.sendFile(path.join(__dirname,'..', 'static/uploads/index.html'));
+  res.sendFile(ecran);
 });
 
 /* Utiliser un sous-serveur pour les routes admins */
