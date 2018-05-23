@@ -1,4 +1,9 @@
-/* imports de modules */
+var express = require('express'),
+    formidable = require('formidable'),
+    fs = require('fs'),
+    bodyParser = require('body-parser'),
+    path = require('path');
+    unzip = require('unzip');
 
 var express = require('express');
 var formidable = require('formidable');
@@ -66,6 +71,44 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
 
 
   });
+
+  app_admin.route('/zip') // Pour importer une nouvelle page écran
+    .get(function(req, res, next){
+      res.render('a_new-zip-file');
+    })
+    .post(function(req, res, next){
+      // Lorsqu'un fichier est uploadé:
+      // On crée un nouveau recepteur formidable (tableau de fichier)
+      var form = new formidable.IncomingForm();
+
+      // L'utilisateur peut importer plusieurs fichiers d'un coup
+      form.multiples = false;
+
+      // Enregistrer les uploads dans le fichier /uploads
+      form.uploadDir = path.join(__dirname, '..', '/static/archives');
+
+      // On renomme chaque fichier reçu avec son nom originel
+      // A l'origine il a un nom du type "Upload029192..."
+      form.on('file', function(field, file) {
+        //fs.rename(file.path, path.join(form.uploadDir, file.name));
+        fs.rename(file.path, path.join(form.uploadDir, '/archive.zip'));
+      });
+
+      // informer en cas d'erreur
+      form.on('error', function(err) {
+        console.log('An error has occured: \n' + err);
+      });
+
+      // parse the incoming request containing the form data
+      form.parse(req);
+
+      // once all the files have been uploaded, send a response to the client
+      form.on('end', function() {
+        fs.createReadStream(__dirname, '..', '/static/archives/archive.zip').pipe(unzip.Extract({ path: 'output/path' }));
+        res.render('a_new-screen-page-success');
+      });
+
+    });
 
 app_admin.get('/Reinitialisation', function(req, res, next) {
   fs.copyFileSync(path.join(__dirname, '..', '/static/uploads/index0.html'), path.join(__dirname, '..', '/static/uploads/index.html'));
