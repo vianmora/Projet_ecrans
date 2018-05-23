@@ -5,14 +5,8 @@ var express = require('express'),
     path = require('path');
     unzip = require('unzip');
 
-var express = require('express');
-var formidable = require('formidable');
-var fs = require('fs');
-var bodyParser = require('body-parser');
-var path = require('path');
-
 var outils_messages = require('./messages.js');
-var app_admin = express();
+var app_admin = express(); 
 
 app_admin.use(bodyParser.json());
 app_admin.use(bodyParser.urlencoded({ extended: false }));
