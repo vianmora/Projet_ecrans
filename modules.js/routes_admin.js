@@ -57,11 +57,8 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
     // On décode la requète contenant les fichiers et on l'upload avec form
     form.parse(req);
 
-<<<<<<< HEAD
-    // une fois que le fichier a été enregistré, on envoie une page réponse au client
-=======
+
     // Une fois que tous les fichiers ont été enregistrés,on envoie une réponse au client
->>>>>>> 8f3bf29ff32d42db3018f10777ae396233bcf149
     form.on('end', function() {
       res.render('a_new-screen-page-success');
     });
