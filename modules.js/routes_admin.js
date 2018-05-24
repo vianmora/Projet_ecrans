@@ -6,7 +6,7 @@ var express = require('express'),
     unzip = require('unzip');
 
 var outils_messages = require('./messages.js');
-var app_admin = express(); 
+var app_admin = express();
 
 app_admin.use(bodyParser.json());
 app_admin.use(bodyParser.urlencoded({ extended: false }));
@@ -47,7 +47,7 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
     // A l'origine il a un nom du type "Upload029192..."
     form.on('file', function(field, file) {
       //fs.rename(file.path, path.join(form.uploadDir, file.name));
-      fs.rename(file.path, path.join(form.uploadDir, '/index.html'));
+      fs.renameSync(file.path, path.join(form.uploadDir, '/index.html'));
     });
 
     // informer en cas d'erreur
@@ -55,7 +55,7 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
       console.log('An error has occured: \n' + err);
     });
 
-    // parse the incoming request containing the form data
+    // On décode la requète contenant les fichiers et on l'upload avec form
     form.parse(req);
 
     // once all the files have been uploaded, send a response to the client
@@ -85,7 +85,7 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
       // A l'origine il a un nom du type "Upload029192..."
       form.on('file', function(field, file) {
         //fs.rename(file.path, path.join(form.uploadDir, file.name));
-        fs.rename(file.path, path.join(form.uploadDir, '/archive.zip'));
+        fs.renameSync(file.path, path.join(form.uploadDir, '/archive.zip'));
       });
 
       // informer en cas d'erreur
@@ -93,12 +93,13 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
         console.log('An error has occured: \n' + err);
       });
 
-      // parse the incoming request containing the form data
+      // On décode la requète contenant les fichiers et on l'upload avec form
       form.parse(req);
 
       // once all the files have been uploaded, send a response to the client
       form.on('end', function() {
-        fs.createReadStream(__dirname, '..', '/static/archives/archive.zip').pipe(unzip.Extract({ path: 'output/path' }));
+        var readStream = fs.createReadStream(path.join(__dirname, '..', '/static/archives/archive.zip'));
+        readStream.pipe(unzip.Extract({ path: path.join(__dirname, '..', '/static/uploads')}));
         res.render('a_new-screen-page-success');
       });
 

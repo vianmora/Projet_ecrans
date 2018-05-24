@@ -23,7 +23,7 @@
               <textarea id="texte" name="texte" class="materialize-textarea"></textarea>
               <label for="texte">Textarea</label>
             </div> -->
-            <label for="fileUpload"> Insérer un fichier html à afficher </label>
+            <label for="fileUpload"> Insérer un fichier .zip à afficher </label>
             <div class="file-field input-field">
               <div class="btn">
                 <span>fichier</span>
@@ -77,34 +77,6 @@
                     })
           })});
           </script>
-
-      <!-- <script>
-              $(function() {
-                  $( "form" ).submit((event) => {
-                      event.preventDefault();
-                      data = {
-                          texte: $("$div").val()
-                      }
-
-                      if (data.texte) {
-                          console.log("data sent: " + JSON.stringify(data))
-                          $.ajax({
-                              url: "http://" + $(location).attr('host') + "/admin",
-                              type: 'POST',
-                              contentType: 'application/json',
-                              data: JSON.stringify(data),
-                              success: function(data) {
-                                  $("$div").val("")
-                                  Materialize.toast('Votre demande a été envoyée!', 2000)
-                              }
-                          })
-                      }
-                      else {
-                          console.log("no text to send.")
-                      }
-                  })
-              })
-          </script> -->
 		</section>
 
 		<% include partials/Footer.ejs %>
