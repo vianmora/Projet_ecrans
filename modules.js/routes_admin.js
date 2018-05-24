@@ -58,7 +58,7 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
     // On décode la requète contenant les fichiers et on l'upload avec form
     form.parse(req);
 
-    // once all the files have been uploaded, send a response to the client
+    // une fois que le fichier a été enregistré, on envoie une page réponse au client
     form.on('end', function() {
       res.render('a_new-screen-page-success');
     });
@@ -96,7 +96,7 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
       // On décode la requète contenant les fichiers et on l'upload avec form
       form.parse(req);
 
-      // once all the files have been uploaded, send a response to the client
+      // une fois que l'archive a été uploadé, on la dézippe et on envoie une page de réponse
       form.on('end', function() {
         var readStream = fs.createReadStream(path.join(__dirname, '..', '/static/archives/archive.zip'));
         readStream.pipe(unzip.Extract({ path: path.join(__dirname, '..', '/static/uploads')}));
