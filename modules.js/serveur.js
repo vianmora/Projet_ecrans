@@ -22,8 +22,16 @@ app.set('view engine', 'ejs'); // Utiliser le moteur de template ejs
 app.use(bodyparser.urlencoded({ extended: false }));
 
 // les liens static
+app.use('/static' /*lien à appeler*/, express.static('static' /*lien réel*/));
 app.use('/assets' /*lien à appeler*/, express.static('assets' /*lien réel*/));
-//app.use('/static' /*lien à appeler*/, express.static('static' /*lien réel*/));
+
+//Ces lignes indiques que les liens contenus dans le index.html du fichier zip sont des fichiers statiques
+//Atttention : il faut que la page du .zip que l'on veut afficher s'appelle index.html
+//Et que les images, polices et styles soient dans /images, /polices et Styles.css à la racine du .zip
+app.use('/images' /*lien à appeler*/, express.static('static/uploads/images' /*lien réel*/));
+app.use('/polices' /*lien à appeler*/, express.static('static/uploads/polices' /*lien réel*/));
+app.use('/styles.css' /*lien à appeler*/, express.static('static/uploads/Styles.css' /*lien réel*/));
+
 
 app.get('/', function(req, res){
   res.render('home');

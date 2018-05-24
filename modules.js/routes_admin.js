@@ -46,7 +46,6 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
     // On renomme chaque fichier reçu avec son nom originel
     // A l'origine il a un nom du type "Upload029192..."
     form.on('file', function(field, file) {
-      //fs.rename(file.path, path.join(form.uploadDir, file.name));
       fs.renameSync(file.path, path.join(form.uploadDir, '/index.html'));
     });
 
@@ -58,7 +57,7 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
     // On décode la requète contenant les fichiers et on l'upload avec form
     form.parse(req);
 
-    // once all the files have been uploaded, send a response to the client
+    // Une fois que tous les fichiers ont été enregistrés,on envoie une réponse au client
     form.on('end', function() {
       res.render('a_new-screen-page-success');
     });
@@ -96,7 +95,8 @@ app_admin.route('/Nouvelle-page') // Pour importer une nouvelle page écran
       // On décode la requète contenant les fichiers et on l'upload avec form
       form.parse(req);
 
-      // once all the files have been uploaded, send a response to the client
+      // Une fois que tous les fichiers ont été enregistrés,on envoie une réponse au client
+      // A la fin de l'upload on envoie l'archive dans un pipe et la méthode extract d'unzip permet de déziper
       form.on('end', function() {
         var readStream = fs.createReadStream(path.join(__dirname, '..', '/static/archives/archive.zip'));
         readStream.pipe(unzip.Extract({ path: path.join(__dirname, '..', '/static/uploads')}));
